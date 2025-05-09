@@ -10,4 +10,16 @@ const getContacts = async (req, res) => {
     }
 }
 
-module.exports = { getContacts };
+// Get a single contact by Id
+const getContactById = async (req, res) => {
+    try {
+        const contact = await Contact.findById(req.params.id);
+        if(!contact) {
+            return res.status(404).json({ error: "Contact not found"});
+        } res.status(200).json(contact);
+    } catch (error) {
+        res.status(500).json({ error: "Error retrieving contact"});
+    }
+};
+
+module.exports = { getContacts, getContactById };
