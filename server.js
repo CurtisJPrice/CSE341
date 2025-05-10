@@ -1,21 +1,29 @@
+// server.js or app.js
+
+require('dotenv').config();
 const express = require('express');
-const connectDataBase = require('./src/database/connection');
+const mongoose = require('mongoose');
 const app = express();
-const professionalRoute = require('./src/routes/professionalRoutes');
-const contactsRoute = require('./src/routes/contactsRoutes');
 
-connectDataBase();
+// Connect to MongoDB using .env file
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => console.log('✅ MongoDB connected successfully'))
+.catch((err) => console.error('❌ MongoDB connection error:', err));
 
-const port = process.env.PORT || 8080;
+// Your other middleware and routes go here
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// Frontend static files
-app.use(express.static('public'));
+// Example route
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
 
-// Routes to endpoints
-app.use('/professional', professionalRoute);
-app.use('/contacts', contactsRoute)
-
-// Start the server
-app.listen(port, () => {
-  console.log('Web Server is listening at port ' + port);
+// Start server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
 });
