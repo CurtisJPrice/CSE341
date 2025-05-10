@@ -1,5 +1,5 @@
 {
-  "name": "cse341_node",
+  "name": "CSE341",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
@@ -7,15 +7,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/g-e-rusk/cse341_node.git"
+    "url": "git+https://github.com/CurtisJPrice/CSE341.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/g-e-rusk/cse341_node/issues"
+    "url": "https://github.com/CurtisJPrice/CSE341/issues"
   },
-  "homepage": "https://github.com/g-e-rusk/cse341_node#readme",
+  "homepage": "https://github.com/CurtisJPrice/CSE341#readme",
   "description": "",
   "dependencies": {
     "dotenv": "^16.5.0",
