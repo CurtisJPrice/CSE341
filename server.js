@@ -1,21 +1,17 @@
 const express = require('express');
-const connectDataBase = require('./src/database/connection');
+
+const mongodb = require('./data/database');
 const app = express();
-const professionalRoute = require('./src/routes/professionalRoutes');
-const contactsRoute = require('./src/routes/contactsRoutes');
 
-connectDataBase();
+const port = process.env.PORT || 3000;
 
-const port = process.env.PORT || 8080;
+app.use('/', require('./routes'));
 
-// Frontend static files
-app.use(express.static('public'));
 
-// Routes to endpoints
-app.use('/professional', professionalRoute);
-app.use('/contacts', contactsRoute)
-
-// Start the server
-app.listen(port, () => {
-  console.log('Web Server is listening at port ' + port);
+mongodb.initDb((err) => {
+  if (err) {
+    console.log(err);
+  } else {
+    app.listen(port, () => {console.log(`Database is listening and node running on port ${port}`)});
+  }
 });

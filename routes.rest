@@ -1,0 +1,17 @@
+// Local
+
+### Get all contacts
+GET http://localhost:3000/contacts
+
+### Get single contact
+GET http://localhost:3000/contacts/681e70fdbc18d8b840a0dbb0
+
+
+
+// Production
+
+### Get all contacts
+GET https://cse341-project1-szbl.onrender.com/contacts
+
+### Get single contact
+GET https://cse341-project1-szbl.onrender.com/contacts/681e70fdbc18d8b840a0dbb0

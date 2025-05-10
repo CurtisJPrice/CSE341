@@ -1,24 +1,24 @@
 {
-  "name": "cse341",
+  "name": "cse341-project1",
   "version": "1.0.0",
-  "description": "",
+  "description": "My First Project",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
-    "start-prod": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/E-I-M-C/cse341-project1.git"
+  },
+  "author": "E-I-M-C",
   "license": "ISC",
-  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/E-I-M-C/cse341-project1/issues"
+  },
+  "homepage": "https://github.com/E-I-M-C/cse341-project1#readme",
   "dependencies": {
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "mongodb": "^6.16.0",
-    "mongoose": "^8.14.1"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.10"
+    "mongodb": "^6.16.0"
   }
 }
