@@ -1,17 +1,14 @@
-// Local
-
+//LOCAL HOST
 ### Get all contacts
 GET http://localhost:3000/contacts
 
-### Get single contact
-GET http://localhost:3000/contacts/681e70fdbc18d8b840a0dbb0
+### Get contact by id
+GET http://localhost:3000/contacts/681e9cfc4b5d423dc15aa30b
 
-
-
-// Production
-
+//PRODUCTION
 ### Get all contacts
-GET https://cse341-project1-szbl.onrender.com/contacts
+GET https://cse341-node-ofaz.onrender.com/contacts
 
-### Get single contact
-GET https://cse341-project1-szbl.onrender.com/contacts/681e70fdbc18d8b840a0dbb0
+### Get contact by id
+GET https://cse341-node-ofaz.onrender.com/contacts/681e9bd14b5d423dc15aa303
+
